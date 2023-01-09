@@ -1,3 +1,4 @@
+import { graphql, useStaticQuery } from "gatsby";
 import * as React from "react";
 import Author from "../components/Author";
 import Layout from "../components/Layout";
