@@ -1,22 +1,19 @@
 import React from "react";
-import Author from "../components/Author";
 import Layout from "../components/Layout";
-
 import Seo from "../components/Seo";
+import Author from "../components/Author";
 
-function Blog() {
+export default function AboutUs() {
   return (
-    <div>
-      <Layout title="Blog">
-        <p>Hello, welcome to my blog!</p>
+    <>
+      <Layout title="About Us">
+        <p>this is my gatsby page test</p>
       </Layout>
       <Author authorName="griteach"></Author>
-    </div>
+    </>
   );
 }
 
-export default Blog;
-
 export function Head() {
-  return <Seo title="Blog"></Seo>;
+  return <Seo title="About Us"></Seo>;
 }

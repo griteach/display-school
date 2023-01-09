@@ -1,11 +1,19 @@
 import * as React from "react";
+import Author from "../components/Author";
+import Layout from "../components/Layout";
+import Seo from "../components/Seo";
 
-const IndexPage = () => {
+export default function IndexPage() {
   return (
-    <div>
-      <h1>MAIN PAGE</h1>
-    </div>
+    <>
+      <Layout title="Main Page">
+        <p>this is main page</p>
+      </Layout>
+      <Author authorName="griteach"></Author>
+    </>
   );
-};
+}
 
-export default IndexPage;
+export function Head() {
+  return <Seo title="Main"></Seo>;
+}
