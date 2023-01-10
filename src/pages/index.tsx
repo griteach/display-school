@@ -1,7 +1,7 @@
 import { graphql, Link, PageProps, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
-import Author from "../components/Author";
+import Author from "../components/Footer";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 

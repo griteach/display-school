@@ -1,6 +1,6 @@
 import { graphql, Link, PageProps } from "gatsby";
 import React from "react";
-import Author from "../../components/Author";
+import Author from "../../components/Footer";
 import Layout from "../../components/Layout";
 
 import Seo from "../../components/Seo";
