@@ -7,26 +7,23 @@ import Seo from "../../components/Seo";
 
 function Blog({ data }: PageProps<Queries.BlogPostsQuery>) {
   return (
-    <div>
-      <Layout title="Blog">
-        <section>
-          {data.allMdx.nodes.map((file, index) => (
-            <article key={index}>
-              <Link to={`/blog/${file.frontmatter?.slug}`}>
-                <h3>{file.frontmatter?.title}</h3>
-                <h5>
-                  {file.frontmatter?.category} in {file.frontmatter?.date}
-                </h5>
-                <h6>{file.frontmatter?.author}</h6>
-                <hr />
-                <p>{file.excerpt}</p>
-              </Link>
-            </article>
-          ))}
-        </section>
-      </Layout>
-      <Author authorName="griteach"></Author>
-    </div>
+    <Layout title="Blog">
+      <section className="grid">
+        {data.allMdx.nodes.map((file, index) => (
+          <article key={index}>
+            <Link to={`/blog/${file.frontmatter?.slug}`}>
+              <h3>{file.frontmatter?.title}</h3>
+              <h5>
+                {file.frontmatter?.category} in {file.frontmatter?.date}
+              </h5>
+              <h6>{file.frontmatter?.author}</h6>
+
+              <p>{file.excerpt}</p>
+            </Link>
+          </article>
+        ))}
+      </section>
+    </Layout>
   );
 }
 
